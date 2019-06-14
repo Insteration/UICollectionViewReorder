@@ -52,6 +52,8 @@ class CollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         
+        let temp = charArray.remove(at: sourceIndexPath.item)
+        charArray.insert(temp, at: destinationIndexPath.item)
     }
 
 }
